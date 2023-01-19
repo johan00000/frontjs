@@ -76,6 +76,9 @@
     align-items: center;
   }
   @media (max-width: 640px) {
+    .desktop-menu{
+        display: none;
+    }
     .menu {
       display: block;
     }
@@ -86,10 +89,13 @@
       display: none;
     }
   }
+  @media (min-width: 640px) {
+    .mobile-menu{
+        display: none;
+    }
+  }
 
-
-
-  /*opcion del nombre*/
+  /*menu destopk*/
   .cambio{
     display: none;
   }
@@ -145,4 +151,55 @@
     text-decoration: none;
     margin-bottom: 20px;
     display: inline-block;
+  }
+
+
+
+
+
+  /*menu movil*/
+  :root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .mobile-menu {
+    position:absolute;
+    top: 51px;
+    left: 5px;
+    padding: 24px;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+  }
+  .mobile-menu ul {
+    padding: 0;
+    margin: 4px 0 0;
+    list-style: none;
+  }
+  .mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+  }
+  .mobile-menu ul li {
+    margin-bottom: 24px;
+  }
+  .email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+  }
+  .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
   }
